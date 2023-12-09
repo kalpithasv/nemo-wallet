@@ -1,39 +1,80 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
+"use strict";
 (() => {
 var exports = {};
-exports.id = "pages/_document";
-exports.ids = ["pages/_document"];
+exports.id = 660;
+exports.ids = [660];
 exports.modules = {
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-eval("/**\n * Hoists a name from a module or promised module.\n *\n * @param module the module to hoist the name from\n * @param name the name to hoist\n * @returns the value on the module (or promised module)\n */ \nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nObject.defineProperty(exports, \"hoist\", ({\n    enumerable: true,\n    get: function() {\n        return hoist;\n    }\n}));\nfunction hoist(module, name) {\n    // If the name is available in the module, return it.\n    if (name in module) {\n        return module[name];\n    }\n    // If a property called `then` exists, assume it's a promise and\n    // return a promise that resolves to the name.\n    if (\"then\" in module && typeof module.then === \"function\") {\n        return module.then((mod)=>hoist(mod, name));\n    }\n    // If we're trying to hoise the default export, and the module is a function,\n    // return the module itself.\n    if (typeof module === \"function\" && name === \"default\") {\n        return module;\n    }\n    // Otherwise, return undefined.\n    return undefined;\n}\n\n//# sourceMappingURL=helpers.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9oZWxwZXJzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQWlCO0FBQ2pCLDhDQUE2QztBQUM3QztBQUNBLENBQUMsRUFBQztBQUNGLHlDQUF3QztBQUN4QztBQUNBO0FBQ0E7QUFDQTtBQUNBLENBQUMsRUFBQztBQUNGO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSIsInNvdXJjZXMiOlsid2VicGFjazovL2Nha2VlcXVpdHkvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9oZWxwZXJzLmpzPzk5ZmQiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBIb2lzdHMgYSBuYW1lIGZyb20gYSBtb2R1bGUgb3IgcHJvbWlzZWQgbW9kdWxlLlxuICpcbiAqIEBwYXJhbSBtb2R1bGUgdGhlIG1vZHVsZSB0byBob2lzdCB0aGUgbmFtZSBmcm9tXG4gKiBAcGFyYW0gbmFtZSB0aGUgbmFtZSB0byBob2lzdFxuICogQHJldHVybnMgdGhlIHZhbHVlIG9uIHRoZSBtb2R1bGUgKG9yIHByb21pc2VkIG1vZHVsZSlcbiAqLyBcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwge1xuICAgIHZhbHVlOiB0cnVlXG59KTtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcImhvaXN0XCIsIHtcbiAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgIGdldDogZnVuY3Rpb24oKSB7XG4gICAgICAgIHJldHVybiBob2lzdDtcbiAgICB9XG59KTtcbmZ1bmN0aW9uIGhvaXN0KG1vZHVsZSwgbmFtZSkge1xuICAgIC8vIElmIHRoZSBuYW1lIGlzIGF2YWlsYWJsZSBpbiB0aGUgbW9kdWxlLCByZXR1cm4gaXQuXG4gICAgaWYgKG5hbWUgaW4gbW9kdWxlKSB7XG4gICAgICAgIHJldHVybiBtb2R1bGVbbmFtZV07XG4gICAgfVxuICAgIC8vIElmIGEgcHJvcGVydHkgY2FsbGVkIGB0aGVuYCBleGlzdHMsIGFzc3VtZSBpdCdzIGEgcHJvbWlzZSBhbmRcbiAgICAvLyByZXR1cm4gYSBwcm9taXNlIHRoYXQgcmVzb2x2ZXMgdG8gdGhlIG5hbWUuXG4gICAgaWYgKFwidGhlblwiIGluIG1vZHVsZSAmJiB0eXBlb2YgbW9kdWxlLnRoZW4gPT09IFwiZnVuY3Rpb25cIikge1xuICAgICAgICByZXR1cm4gbW9kdWxlLnRoZW4oKG1vZCk9PmhvaXN0KG1vZCwgbmFtZSkpO1xuICAgIH1cbiAgICAvLyBJZiB3ZSdyZSB0cnlpbmcgdG8gaG9pc2UgdGhlIGRlZmF1bHQgZXhwb3J0LCBhbmQgdGhlIG1vZHVsZSBpcyBhIGZ1bmN0aW9uLFxuICAgIC8vIHJldHVybiB0aGUgbW9kdWxlIGl0c2VsZi5cbiAgICBpZiAodHlwZW9mIG1vZHVsZSA9PT0gXCJmdW5jdGlvblwiICYmIG5hbWUgPT09IFwiZGVmYXVsdFwiKSB7XG4gICAgICAgIHJldHVybiBtb2R1bGU7XG4gICAgfVxuICAgIC8vIE90aGVyd2lzZSwgcmV0dXJuIHVuZGVmaW5lZC5cbiAgICByZXR1cm4gdW5kZWZpbmVkO1xufVxuXG4vLyMgc291cmNlTWFwcGluZ1VSTD1oZWxwZXJzLmpzLm1hcCJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js\n");
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&preferredRegion=&absolutePagePath=private-next-pages%2F_document&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&preferredRegion=&absolutePagePath=private-next-pages%2F_document&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D! ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ 8716:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   getServerSideProps: () => (/* binding */ getServerSideProps),\n/* harmony export */   getStaticPaths: () => (/* binding */ getStaticPaths),\n/* harmony export */   getStaticProps: () => (/* binding */ getStaticProps),\n/* harmony export */   reportWebVitals: () => (/* binding */ reportWebVitals),\n/* harmony export */   routeModule: () => (/* binding */ routeModule),\n/* harmony export */   unstable_getServerProps: () => (/* binding */ unstable_getServerProps),\n/* harmony export */   unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),\n/* harmony export */   unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),\n/* harmony export */   unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),\n/* harmony export */   unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/future/route-modules/pages/module */ \"./node_modules/next/dist/server/future/route-modules/pages/module.js\");\n/* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-route-loader/helpers */ \"./node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js\");\n/* harmony import */ var private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! private-next-pages/_document */ \"./pages/_document.js\");\n/* harmony import */ var private_next_pages_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! private-next-pages/_app */ \"./pages/_app.js\");\n\n        // Next.js Route Loader\n        \n        \n\n        // Import the app and document modules.\n        \n        \n\n        // Import the userland code.\n        \n\n        // Re-export the component (should be the default export).\n        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"default\"));\n\n        // Re-export methods.\n        const getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"getStaticProps\")\n        const getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"getStaticPaths\")\n        const getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"getServerSideProps\")\n        const config = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"config\")\n        const reportWebVitals = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"reportWebVitals\")\n        \n\n        // Re-export legacy methods.\n        const unstable_getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"unstable_getStaticProps\")\n        const unstable_getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"unstable_getStaticPaths\")\n        const unstable_getStaticParams = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"unstable_getStaticParams\")\n        const unstable_getServerProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"unstable_getServerProps\")\n        const unstable_getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__.hoist)(private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__, \"unstable_getServerSideProps\")\n\n        // Create and export the route module that will be consumed.\n        const options = {\"definition\":{\"kind\":\"PAGES\",\"page\":\"/_document\",\"pathname\":\"/_document\",\"bundlePath\":\"\",\"filename\":\"\"}}\n        const routeModule = new (next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default())({\n          ...options,\n          components: {\n            App: private_next_pages_app__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n            Document: private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n          },\n          userland: private_next_pages_document__WEBPACK_IMPORTED_MODULE_2__,\n        })\n        \n        \n    //# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9pbmRleC5qcz9wYWdlPSUyRl9kb2N1bWVudCZwcmVmZXJyZWRSZWdpb249JmFic29sdXRlUGFnZVBhdGg9cHJpdmF0ZS1uZXh0LXBhZ2VzJTJGX2RvY3VtZW50JmFic29sdXRlQXBwUGF0aD1wcml2YXRlLW5leHQtcGFnZXMlMkZfYXBwJmFic29sdXRlRG9jdW1lbnRQYXRoPXByaXZhdGUtbmV4dC1wYWdlcyUyRl9kb2N1bWVudCZtaWRkbGV3YXJlQ29uZmlnQmFzZTY0PWUzMCUzRCEiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQ0E7QUFDQSxRQUFvRjtBQUNwRixRQUF5Rjs7QUFFekY7QUFDQSxRQUFzRTtBQUN0RSxRQUE0RDs7QUFFNUQ7QUFDQSxRQUFnRTs7QUFFaEU7QUFDQSxRQUFRLGlFQUFlLGdHQUFLLENBQUMsd0RBQVEsWUFBWTs7QUFFakQ7QUFDQSxRQUFlLHVCQUF1QixnR0FBSyxDQUFDLHdEQUFRO0FBQ3BELFFBQWUsdUJBQXVCLGdHQUFLLENBQUMsd0RBQVE7QUFDcEQsUUFBZSwyQkFBMkIsZ0dBQUssQ0FBQyx3REFBUTtBQUN4RCxRQUFlLGVBQWUsZ0dBQUssQ0FBQyx3REFBUTtBQUM1QyxRQUFlLHdCQUF3QixnR0FBSyxDQUFDLHdEQUFRO0FBQ3JEOztBQUVBO0FBQ0EsUUFBZSxnQ0FBZ0MsZ0dBQUssQ0FBQyx3REFBUTtBQUM3RCxRQUFlLGdDQUFnQyxnR0FBSyxDQUFDLHdEQUFRO0FBQzdELFFBQWUsaUNBQWlDLGdHQUFLLENBQUMsd0RBQVE7QUFDOUQsUUFBZSxnQ0FBZ0MsZ0dBQUssQ0FBQyx3REFBUTtBQUM3RCxRQUFlLG9DQUFvQyxnR0FBSyxDQUFDLHdEQUFROztBQUVqRTtBQUNBLHlCQUF5QixjQUFjO0FBQ3ZDLGdDQUFnQywyRkFBVztBQUMzQztBQUNBO0FBQ0EsaUJBQWlCLDhEQUFpQjtBQUNsQyxzQkFBc0IsbUVBQXNCO0FBQzVDLFdBQVc7QUFDWCxrQkFBa0I7QUFDbEIsU0FBUztBQUNUO0FBQ0EsUUFBOEI7QUFDOUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jYWtlZXF1aXR5Lz9jOTFlIl0sInNvdXJjZXNDb250ZW50IjpbIlxuICAgICAgICAvLyBOZXh0LmpzIFJvdXRlIExvYWRlclxuICAgICAgICBpbXBvcnQgUm91dGVNb2R1bGUgZnJvbSBcIm5leHQvZGlzdC9zZXJ2ZXIvZnV0dXJlL3JvdXRlLW1vZHVsZXMvcGFnZXMvbW9kdWxlXCJcbiAgICAgICAgaW1wb3J0IHsgaG9pc3QgfSBmcm9tIFwibmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LXJvdXRlLWxvYWRlci9oZWxwZXJzXCJcblxuICAgICAgICAvLyBJbXBvcnQgdGhlIGFwcCBhbmQgZG9jdW1lbnQgbW9kdWxlcy5cbiAgICAgICAgaW1wb3J0ICogYXMgbW9kdWxlRG9jdW1lbnQgZnJvbSBcInByaXZhdGUtbmV4dC1wYWdlcy9fZG9jdW1lbnRcIlxuICAgICAgICBpbXBvcnQgKiBhcyBtb2R1bGVBcHAgZnJvbSBcInByaXZhdGUtbmV4dC1wYWdlcy9fYXBwXCJcblxuICAgICAgICAvLyBJbXBvcnQgdGhlIHVzZXJsYW5kIGNvZGUuXG4gICAgICAgIGltcG9ydCAqIGFzIHVzZXJsYW5kIGZyb20gXCJwcml2YXRlLW5leHQtcGFnZXMvX2RvY3VtZW50XCJcblxuICAgICAgICAvLyBSZS1leHBvcnQgdGhlIGNvbXBvbmVudCAoc2hvdWxkIGJlIHRoZSBkZWZhdWx0IGV4cG9ydCkuXG4gICAgICAgIGV4cG9ydCBkZWZhdWx0IGhvaXN0KHVzZXJsYW5kLCBcImRlZmF1bHRcIilcblxuICAgICAgICAvLyBSZS1leHBvcnQgbWV0aG9kcy5cbiAgICAgICAgZXhwb3J0IGNvbnN0IGdldFN0YXRpY1Byb3BzID0gaG9pc3QodXNlcmxhbmQsIFwiZ2V0U3RhdGljUHJvcHNcIilcbiAgICAgICAgZXhwb3J0IGNvbnN0IGdldFN0YXRpY1BhdGhzID0gaG9pc3QodXNlcmxhbmQsIFwiZ2V0U3RhdGljUGF0aHNcIilcbiAgICAgICAgZXhwb3J0IGNvbnN0IGdldFNlcnZlclNpZGVQcm9wcyA9IGhvaXN0KHVzZXJsYW5kLCBcImdldFNlcnZlclNpZGVQcm9wc1wiKVxuICAgICAgICBleHBvcnQgY29uc3QgY29uZmlnID0gaG9pc3QodXNlcmxhbmQsIFwiY29uZmlnXCIpXG4gICAgICAgIGV4cG9ydCBjb25zdCByZXBvcnRXZWJWaXRhbHMgPSBob2lzdCh1c2VybGFuZCwgXCJyZXBvcnRXZWJWaXRhbHNcIilcbiAgICAgICAgXG5cbiAgICAgICAgLy8gUmUtZXhwb3J0IGxlZ2FjeSBtZXRob2RzLlxuICAgICAgICBleHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgXCJ1bnN0YWJsZV9nZXRTdGF0aWNQcm9wc1wiKVxuICAgICAgICBleHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGF0aHMgPSBob2lzdCh1c2VybGFuZCwgXCJ1bnN0YWJsZV9nZXRTdGF0aWNQYXRoc1wiKVxuICAgICAgICBleHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGFyYW1zID0gaG9pc3QodXNlcmxhbmQsIFwidW5zdGFibGVfZ2V0U3RhdGljUGFyYW1zXCIpXG4gICAgICAgIGV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJQcm9wcyA9IGhvaXN0KHVzZXJsYW5kLCBcInVuc3RhYmxlX2dldFNlcnZlclByb3BzXCIpXG4gICAgICAgIGV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJTaWRlUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgXCJ1bnN0YWJsZV9nZXRTZXJ2ZXJTaWRlUHJvcHNcIilcblxuICAgICAgICAvLyBDcmVhdGUgYW5kIGV4cG9ydCB0aGUgcm91dGUgbW9kdWxlIHRoYXQgd2lsbCBiZSBjb25zdW1lZC5cbiAgICAgICAgY29uc3Qgb3B0aW9ucyA9IHtcImRlZmluaXRpb25cIjp7XCJraW5kXCI6XCJQQUdFU1wiLFwicGFnZVwiOlwiL19kb2N1bWVudFwiLFwicGF0aG5hbWVcIjpcIi9fZG9jdW1lbnRcIixcImJ1bmRsZVBhdGhcIjpcIlwiLFwiZmlsZW5hbWVcIjpcIlwifX1cbiAgICAgICAgY29uc3Qgcm91dGVNb2R1bGUgPSBuZXcgUm91dGVNb2R1bGUoe1xuICAgICAgICAgIC4uLm9wdGlvbnMsXG4gICAgICAgICAgY29tcG9uZW50czoge1xuICAgICAgICAgICAgQXBwOiBtb2R1bGVBcHAuZGVmYXVsdCxcbiAgICAgICAgICAgIERvY3VtZW50OiBtb2R1bGVEb2N1bWVudC5kZWZhdWx0LFxuICAgICAgICAgIH0sXG4gICAgICAgICAgdXNlcmxhbmQsXG4gICAgICAgIH0pXG4gICAgICAgIFxuICAgICAgICBleHBvcnQgeyByb3V0ZU1vZHVsZSB9XG4gICAgIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&preferredRegion=&absolutePagePath=private-next-pages%2F_document&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   config: () => (/* binding */ config),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   getServerSideProps: () => (/* binding */ getServerSideProps),
+/* harmony export */   getStaticPaths: () => (/* binding */ getStaticPaths),
+/* harmony export */   getStaticProps: () => (/* binding */ getStaticProps),
+/* harmony export */   reportWebVitals: () => (/* binding */ reportWebVitals),
+/* harmony export */   routeModule: () => (/* binding */ routeModule),
+/* harmony export */   unstable_getServerProps: () => (/* binding */ unstable_getServerProps),
+/* harmony export */   unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),
+/* harmony export */   unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),
+/* harmony export */   unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),
+/* harmony export */   unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)
+/* harmony export */ });
+/* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3185);
+/* harmony import */ var next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7182);
+/* harmony import */ var private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6088);
+/* harmony import */ var private_next_pages_app_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6004);
+
+        // Next.js Route Loader
+        
+        
+
+        // Import the app and document modules.
+        
+        
+
+        // Import the userland code.
+        
+
+        // Re-export the component (should be the default export).
+        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "default"));
+
+        // Re-export methods.
+        const getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "getStaticProps")
+        const getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "getStaticPaths")
+        const getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "getServerSideProps")
+        const config = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "config")
+        const reportWebVitals = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "reportWebVitals")
+        
+
+        // Re-export legacy methods.
+        const unstable_getStaticProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "unstable_getStaticProps")
+        const unstable_getStaticPaths = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "unstable_getStaticPaths")
+        const unstable_getStaticParams = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "unstable_getStaticParams")
+        const unstable_getServerProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "unstable_getServerProps")
+        const unstable_getServerSideProps = (0,next_dist_build_webpack_loaders_next_route_loader_helpers__WEBPACK_IMPORTED_MODULE_1__/* .hoist */ .l)(private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__, "unstable_getServerSideProps")
+
+        // Create and export the route module that will be consumed.
+        const options = {"definition":{"kind":"PAGES","page":"/_document","pathname":"/_document","bundlePath":"","filename":""}}
+        const routeModule = new (next_dist_server_future_route_modules_pages_module__WEBPACK_IMPORTED_MODULE_0___default())({
+          ...options,
+          components: {
+            App: private_next_pages_app_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+            Document: private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+          },
+          userland: private_next_pages_document_js__WEBPACK_IMPORTED_MODULE_2__,
+        })
+        
+        
+    
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/next/dist/pages/_document.js":
 /*!***************************************************!*\
   !*** ./node_modules/next/dist/pages/_document.js ***!
@@ -146,97 +187,67 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /*!************************************************************************!*\
   !*** external "next/dist/server/future/route-modules/route-module.js" ***!
   \************************************************************************/
+=======
+/***/ 3076:
+>>>>>>> 608036149d2a2c685645ece37369e2a0b8f61c2e
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/future/route-modules/route-module.js");
 
 /***/ }),
 
-/***/ "../server/get-page-files":
-/*!*****************************************************!*\
-  !*** external "next/dist/server/get-page-files.js" ***!
-  \*****************************************************/
+/***/ 4140:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/get-page-files.js");
 
 /***/ }),
 
-/***/ "../server/htmlescape":
-/*!*************************************************!*\
-  !*** external "next/dist/server/htmlescape.js" ***!
-  \*************************************************/
+/***/ 9716:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/htmlescape.js");
 
 /***/ }),
 
-/***/ "../../../render":
-/*!*********************************************!*\
-  !*** external "next/dist/server/render.js" ***!
-  \*********************************************/
+/***/ 3100:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/render.js");
 
 /***/ }),
 
-/***/ "../server/utils":
-/*!********************************************!*\
-  !*** external "next/dist/server/utils.js" ***!
-  \********************************************/
+/***/ 6368:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/server/utils.js");
 
 /***/ }),
 
-/***/ "../shared/lib/constants":
-/*!****************************************************!*\
-  !*** external "next/dist/shared/lib/constants.js" ***!
-  \****************************************************/
+/***/ 6724:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/constants.js");
 
 /***/ }),
 
-/***/ "../shared/lib/html-context":
-/*!*******************************************************!*\
-  !*** external "next/dist/shared/lib/html-context.js" ***!
-  \*******************************************************/
+/***/ 8743:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/html-context.js");
 
 /***/ }),
 
-/***/ "../shared/lib/is-plain-object":
-/*!**********************************************************!*\
-  !*** external "next/dist/shared/lib/is-plain-object.js" ***!
-  \**********************************************************/
+/***/ 8524:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/dist/shared/lib/is-plain-object.js");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("react");
 
 /***/ })
@@ -248,7 +259,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&preferredRegion=&absolutePagePath=private-next-pages%2F_document&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!"));
+var __webpack_exports__ = __webpack_require__.X(0, [207,947], () => (__webpack_exec__(8716)));
 module.exports = __webpack_exports__;
 
 })();
