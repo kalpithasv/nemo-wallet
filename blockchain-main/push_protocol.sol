@@ -5,7 +5,7 @@ interface IPUSHCommInterface {
     function sendNotification(address _channel, address _recipient, bytes calldata _identity) external;
 }
 
-contract PushNotifier {
+contract PushNotifierProtocol {
     
     address constant EPNS_COMM_CONTRACT_ADDRESS_FOR_SPECIFIC_BLOCKCHAIN = 0xb3971BCef2D791bc4027BbfedFb47319A4AAaaAa;
     address public channelAddress = 0x99FfBf96C9b62aeCAa44729848b0753283C8666c;
@@ -47,5 +47,33 @@ contract PushNotifier {
                 )
             )
         );
+    }
+
+    // New function to send notification on token transfer
+    function notifyOnTokenTransfer(address _receiver, uint256 _amount) public {
+        // Customize notification content based on your requirements
+        string memory title = "Token Transfer";
+        string memory body = string(abi.encodePacked("You received ", toString(_amount), " tokens."));
+        notify(_receiver, NotificationType.Targeted, title, body);
+    }
+
+    // Helper function to convert uint256 to string
+    function toString(uint256 value) internal pure returns (string memory) {
+        if (value == 0) {
+            return "0";
+        }
+        uint256 temp = value;
+        uint256 digits;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+        bytes memory buffer = new bytes(digits);
+        while (value != 0) {
+            digits -= 1;
+            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));
+            value /= 10;
+        }
+        return string(buffer);
     }
 }
