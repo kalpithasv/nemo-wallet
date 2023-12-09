@@ -1,0 +1,17 @@
+{
+  "name": "Dino",
+  "description": "Your KYC-CompIiant Web3 Wallet for Effortless Monetary Transactions",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "dragon.png"
+  },
+  "icons": {
+    "16": "dragon.png",
+    "32": "dragon.png",
+    "48": "dragon.png",
+    "128": "dragon.png"
+  },
+  "permissions": ["tabs", "bookmarks", "unlimitedStorage", "nativeMessaging"]
+}
